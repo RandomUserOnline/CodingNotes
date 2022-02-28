@@ -35,8 +35,8 @@ ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp, color = continent, size =
   expand_limits(y = 0)
 facet_wrap(~continent)
 
-#mean, sum, median, min, max, summarize
-#group by will give combinations of variable
+#mean, sum, median, min, max in summary function
+#group by will give combinations of variable, the leftmost is the one that later one cares
 gapminder %>%
   filter(year == 1957)%>%
   group_by(continent) %>%
@@ -51,3 +51,12 @@ gapminder %>%
 
 #add title
 ggtitle("")
+
+#dplyr
+glimpse()
+select()#put columns in ()
+arrange()
+mutate()
+filter()
+count(, sort =TRUE, wt = population)
+top_n(1, population)
